@@ -11,9 +11,9 @@ const App = () => {
   return (
     <div>
        <form onSubmit={addUser}>
-        Name <input type="text" onChange={()=>setUser(...user, user.name)}></input>
-        Email <input type="email"  onChange={()=>setUser(...user, user.email)}></input>
-        Password <input type="password"  onChange={()=>setUser(...user, user.password)}></input>
+        Name <input type="text" onChange={(eve)=>setUser({...user, name:eve.target.value})}></input>
+        Email <input type="email"  onChange={(eve)=>setUser({...user, email:eve.target.value})}></input>
+        Password <input type="password"  onChange={(eve)=>setUser({...user, password:eve.target.value})}></input>
         <button>Submit</button>
        </form>
     </div>
